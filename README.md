@@ -1,2 +1,2 @@
 # metamorphic_contract
-Repositorio contrato metamórfico de Ethereum
+Repositorio de contrato metamórfico de Ethereum.
