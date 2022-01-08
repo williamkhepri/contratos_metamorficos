@@ -1,4 +1,5 @@
 #Metamórfico
+
 ![GitHub](https://img.shields.io/github/license/0age/metamorphic.svg?colorB=brightgreen)
 [![Build Status](https://travis-ci.org/0age/metamorphic.svg?branch=master)](https://travis-ci.org/0age/metamorphic)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
@@ -13,4 +14,4 @@ Este repositorio también incluye [Metapod](https://github.com/williamkhepri/con
 
 **DESCARGO DE RESPONSABILIDAD: esto implementa características/ errores altamente experimentales: asegúrese de implementar los controles apropiados en sus contratos metamórficos y *eduque a los usuarios de sus contratos* que interactuen con ellos. Estos contratos aún no se han probado o auditado completamente; proceda con precaución y comparta las vulnerabilidades u optimizaciones que descubra.
 
-Visite [esta publicación](#) para entender el contexto.
+Visite [esta publicación](http://www.williamkhepri.com/contratos-metamorficos-de-ethereum/) para entender el contexto.
