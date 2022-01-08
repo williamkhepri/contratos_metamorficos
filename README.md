@@ -15,3 +15,15 @@ Este repositorio también incluye [Metapod](https://github.com/williamkhepri/con
 **DESCARGO DE RESPONSABILIDAD: esto implementa características/ errores altamente experimentales: asegúrese de implementar los controles apropiados en sus contratos metamórficos y *eduque a los usuarios de sus contratos* que interactuen con ellos. Estos contratos aún no se han probado o auditado completamente; proceda con precaución y comparta las vulnerabilidades u optimizaciones que descubra.**
 
 Visite [esta publicación](http://www.williamkhepri.com/contratos-metamorficos-de-ethereum/) para entender el contexto.
+
+Fábrica de Contratos Metamórficos en Mainnet: [0x00000000e82eb0431756271F0d00CFB143685e7B](https://etherscan.io/address/0x00000000e82eb0431756271f0d00cfb143685e7b)
+
+Fábrica de Contratos Metamórficos en Ropsten: [0x00000000D63fB7385Ae38E7753F70e36d190abc2](https://ropsten.etherscan.io/address/0x00000000D63fB7385Ae38E7753F70e36d190abc2)
+
+Fábrica de Create2 Inmutable en Mainnet: [0x000000000063b99B8036c31E91c64fC89bFf9ca7](https://etherscan.io/address/0x000000000063b99b8036c31e91c64fc89bff9ca7#code)
+
+Fábrica de Create2 Inmutable en Ropsten: [0x000000B64Df4e600F23000dbAEEB8c0052C88e73](https://ropsten.etherscan.io/address/0x000000b64df4e600f23000dbaeeb8c0052c88e73)
+
+Metapod en Mainnet: [0x00000000002B13cCcEC913420A21e4D11b2DCd3C](https://etherscan.io/address/0x00000000002b13cccec913420a21e4d11b2dcd3c)
+
+Metapod en Ropsten: [0x0000000000f647BA29e4Dd009D2B7CADa21c1c68](https://ropsten.etherscan.io/address/0x0000000000f647ba29e4dd009d2b7cada21c1c68)
