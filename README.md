@@ -34,7 +34,7 @@ Metapod en Ropsten: [0x0000000000f647BA29e4Dd009D2B7CADa21c1c68](https://ropsten
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [API](#api)
-- [Mantenimiento](#Mantenedores en castellano)
+- [Mantenimiento](#Mantenimiento)
 - [Licencia](#Licencia)
 
 ## Instalación
@@ -305,7 +305,7 @@ Argumentos:
 
 Returns: True si el contrato se ha implementado, False en caso contrario.
 
-## Mantenedores en castellano
+## Mantenimiento
 
 [@williamkhepri](https://github.com/williamkhepri)
 
