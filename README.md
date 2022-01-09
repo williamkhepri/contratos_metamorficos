@@ -31,12 +31,11 @@ Metapod en Ropsten: [0x0000000000f647BA29e4Dd009D2B7CADa21c1c68](https://ropsten
 
 ## Tabla de Contenidos
 
-- [Instalación](#install)
-- [Uso](#usage)
+- [Instalación](#instalación)
+- [Uso](#uso)
 - [API](#api)
-- [Mantenimiento](#maintainers)
-- [Contribución](#contribute)
-- [Licencia](#license)
+- [Mantenimiento](#Mantenedores en castellano)
+- [Licencia](#Licencia)
 
 ## Instalación
 Para instlarlo localmente, necesitarás Node.js v10+ y Yarn *(o npm)*. Para tener todo configurado:
@@ -310,6 +309,6 @@ Returns: True si el contrato se ha implementado, False en caso contrario.
 
 [@williamkhepri](https://github.com/williamkhepri)
 
-## License
+## Licencia
 
 MIT © 2022 William Khepri
