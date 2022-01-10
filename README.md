@@ -66,8 +66,8 @@ $ yarn kakuna ContractOne 0x4150
 
 **Esta documentación es incompleta - consulta el código fuente de cada contrato para obtener un resumen mas completo.**
 
-- [metamorphic_contract_factory.sol](#metamorphic_contract_factory.sol)
-- [inmutable_create2_factory.sol](#inmutable_create2_factory.sol)
+- [metamorphic_contract_factory.sol](#metamorphic_contract_factorysol)
+- [inmutable_create2_factory.sol](#inmutable_create2_factorysol)
 
 ### [metamorphic_Contract_Factory.sol](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/metamorphic_contract_factory.sol)
 
