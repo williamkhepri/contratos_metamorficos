@@ -1,5 +1,7 @@
 # Metamórfico
 
+> Este repositorio es una traducción del repositorio original creado por 0age [metamorphic](https://github.com/0age/metamorphic/)
+
 ![GitHub](https://img.shields.io/github/license/0age/metamorphic.svg?colorB=brightgreen)
 [![Build Status](https://travis-ci.org/0age/metamorphic.svg?branch=master)](https://travis-ci.org/0age/metamorphic)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
@@ -7,10 +9,10 @@
 
 > Metamórfico: una fábrica de contratos para la creación de contratos metamórficos (es decir, reasignables).
 
-Este [contrato de fábrica](https://github.com/williamkhepri/contratos_metamorficos/blob/main/metamorphic_contract_factory.sol) crea *contratos metamórficos* o contratos que se pueden volver a implementar con un nuevo código en la misma dirección. Lo hace implementando el contrato metamórfico con código de inicialización fijo y no determinista a través del código de operación CREATE2. Éste código de inicialización clona un contrato de implementación dado, y opcionalmente, lo inicializa en una operación. Una vez que un contrato sufre una metamorfosis, todo el almacenamiento existente se eliminará y cualquier código de contrato existente se reemplazará con el código de contrato implementado del nuevo contrato de implementación. Alternativamente, la fábica también puede crear contratos metamórficos que utilizan un constructor desplegándolos con un [contrato transitorio](#) intermedio. De lo contrario, se puede utilizar un argumento para llamar atómicamente a una función de inicialización después de clonar una instancia.
-También hay una [fábrica de create2 inmutable](https://github.com/williamkhepri/contratos_metamorficos/blob/main/inmutable_create2_factory.sol) que no ejecuta cambios de contrato, evitando así el metamorfismo de cualquier contrato que implemente(*aunque todavía pueden implementar sus propios metamórficos*).
+Este [contrato de fábrica](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/metamorphic_contract_factory.sol) crea *contratos metamórficos* o contratos que se pueden volver a implementar con un nuevo código en la misma dirección. Lo hace implementando el contrato metamórfico con código de inicialización fijo y no determinista a través del código de operación CREATE2. Éste código de inicialización clona un contrato de implementación dado, y opcionalmente, lo inicializa en una operación. Una vez que un contrato sufre una metamorfosis, todo el almacenamiento existente se eliminará y cualquier código de contrato existente se reemplazará con el código de contrato implementado del nuevo contrato de implementación. Alternativamente, la fábica también puede crear contratos metamórficos que utilizan un constructor desplegándolos con un [contrato transitorio](#) intermedio. De lo contrario, se puede utilizar un argumento para llamar atómicamente a una función de inicialización después de clonar una instancia.
+También hay una [fábrica de create2 inmutable](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/inmutable_create2_factory.sol) que no ejecuta cambios de contrato, evitando así el metamorfismo de cualquier contrato que implemente(*aunque todavía pueden implementar sus propios metamórficos*).
 
-Este repositorio también incluye [Metapod](https://github.com/williamkhepri/contratos_metamorficos/blob/main/metapod.sol), una fábrica para implementar contratos metamórficos "reforzados". (*Tenga en cuenta que la versión proporcionada de Metapod utiliza una dirección codificada, utilizada por el conjunto de pruebas local, a lo largo del contrato deberá modificarla para implementar en cualquier otra dirección*). Todos los contratos implementados a través de Metapod deben incluir un preludio(*o fragmento de código inicial*) que le permite destruir el contrato y reenviar todos los fondos a un contrato de vault dedicado. Para insertar el preludio en su contrato, primero debe modificar cualquier elemento de pila utilizado por destinos `JUMP` o `JUMPI`, así como por compensaciones por ´CODECOPY´. Para probar esto, hay una utidad provista llamada [Kakuna](#), una **POC propensa a errores** para analizar un contrato e insertar un preludio.
+Este repositorio también incluye [Metapod](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/metapod.sol), una fábrica para implementar contratos metamórficos "reforzados". (*Tenga en cuenta que la versión proporcionada de Metapod utiliza una dirección codificada, utilizada por el conjunto de pruebas local, a lo largo del contrato deberá modificarla para implementar en cualquier otra dirección*). Todos los contratos implementados a través de Metapod deben incluir un preludio(*o fragmento de código inicial*) que le permite destruir el contrato y reenviar todos los fondos a un contrato de vault dedicado. Para insertar el preludio en su contrato, primero debe modificar cualquier elemento de pila utilizado por destinos `JUMP` o `JUMPI`, así como por compensaciones por ´CODECOPY´. Para probar esto, hay una utidad provista llamada [Kakuna](#), una **POC propensa a errores** para analizar un contrato e insertar un preludio.
 
 **DESCARGO DE RESPONSABILIDAD: esto implementa características/ errores altamente experimentales: asegúrese de implementar los controles apropiados en sus contratos metamórficos y *eduque a los usuarios de sus contratos* que interactuen con ellos. Estos contratos aún no se han probado o auditado completamente; proceda con precaución y comparta las vulnerabilidades u optimizaciones que descubra.**
 
@@ -67,7 +69,7 @@ $ yarn kakuna ContractOne 0x4150
 - [metamorphic_contract_factory.sol](#metamorphic_contract_factory.sol)
 - [inmutable_create2_factory.sol](#immutable_create2_factory.sol)
 
-### [metamorphic_contract_factory.sol](https://github.com/williamkhepri/contratos_metamorficos/blob/main/inmutable_create2_factory.sol)
+### [metamorphic_contract_factory.sol](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/metamorphic_contract_factory.sol)
 
 Este contrato crea contratos metamórficos o contratos que se pueden volver a implementar con un nuevo código en la misma dirección. Lo hace mediante la implementación de un contrato con código de inicialización fijo, 
 no determinista a través del código de operación `CREATE2`. Este contrato clona el contrato de implementación en su constructor. Una vez que un contrato sufre una metamorfosis, todo el almacenamiento existente se 
@@ -209,7 +211,7 @@ function getMetamorphicContractInitializationCodeHash() external view returns (
 )
 ```
 
-### [inmutable_create2_factory.sol](https://github.com/williamkhepri/contratos_metamorficos/blob/main/inmutable_create2_factory.sol)
+### [inmutable_create2_factory.sol](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/inmutable_create2_factory.sol)
 
 Este contrato proporciona una función safeCreate2 que toma un valor de salt y un bloque de código de inicialización como argumentos y los pasa al ensamblaje en línea. 
 El contrato evita los redespliegues al mantener un mapeo de todos los contratos que ya se han implementado, y previene los adelantos u otras colisiones al requerir que los primeros 20 bytes de la salt sean iguales a la dirección de la persona que llama
