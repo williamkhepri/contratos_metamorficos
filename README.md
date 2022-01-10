@@ -66,10 +66,10 @@ $ yarn kakuna ContractOne 0x4150
 
 **Esta documentación es incompleta - consulta el código fuente de cada contrato para obtener un resumen mas completo.**
 
-- [metamorphic_contract_factory.sol](#metamorphic_contract_factory.sol)
+- [metamorphic_contract_factory.sol](#metamorphic-contract-factory.sol)
 - [inmutable_create2_factory.sol](#immutable_create2_factory.sol)
 
-### [metamorphic_contract_factory.sol](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/metamorphic_contract_factory.sol)
+### [Metamorphic Contract Factory.sol](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/metamorphic_contract_factory.sol)
 
 Este contrato crea contratos metamórficos o contratos que se pueden volver a implementar con un nuevo código en la misma dirección. Lo hace mediante la implementación de un contrato con código de inicialización fijo, 
 no determinista a través del código de operación `CREATE2`. Este contrato clona el contrato de implementación en su constructor. Una vez que un contrato sufre una metamorfosis, todo el almacenamiento existente se 
