@@ -1,13 +1,13 @@
 # Metamórfico
 
-> Este repositorio es una traducción del repositorio original creado por 0age [metamorphic](https://github.com/0age/metamorphic/)
-
 ![GitHub](https://img.shields.io/github/license/0age/metamorphic.svg?colorB=brightgreen)
 [![Build Status](https://travis-ci.org/0age/metamorphic.svg?branch=master)](https://travis-ci.org/0age/metamorphic)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 > Metamórfico: una fábrica de contratos para la creación de contratos metamórficos (es decir, reasignables).
+> Este repositorio es una traducción del repositorio original creado por 0age [metamorphic](https://github.com/0age/metamorphic/)
+
 
 Este [contrato de fábrica](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/metamorphic_contract_factory.sol) crea *contratos metamórficos* o contratos que se pueden volver a implementar con un nuevo código en la misma dirección. Lo hace implementando el contrato metamórfico con código de inicialización fijo y no determinista a través del código de operación CREATE2. Éste código de inicialización clona un contrato de implementación dado, y opcionalmente, lo inicializa en una operación. Una vez que un contrato sufre una metamorfosis, todo el almacenamiento existente se eliminará y cualquier código de contrato existente se reemplazará con el código de contrato implementado del nuevo contrato de implementación. Alternativamente, la fábica también puede crear contratos metamórficos que utilizan un constructor desplegándolos con un [contrato transitorio](#) intermedio. De lo contrario, se puede utilizar un argumento para llamar atómicamente a una función de inicialización después de clonar una instancia.
 También hay una [fábrica de create2 inmutable](https://github.com/williamkhepri/contratos_metamorficos/blob/main/contratos/inmutable_create2_factory.sol) que no ejecuta cambios de contrato, evitando así el metamorfismo de cualquier contrato que implemente(*aunque todavía pueden implementar sus propios metamórficos*).
