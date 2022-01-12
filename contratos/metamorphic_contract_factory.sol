@@ -27,7 +27,7 @@ contract MetamorphicContractFactory {
     //almacena el código de inicialización para contratos metamórficos.
     bytes private _metamorphicContractInitializationCode;
 
-    //almacenta el hash del código de inicialización oara contratos metamórficos.
+    //almacena el hash del código de inicialización para contratos metamórficos.
     bytes32 private _metamorphicContractInitializationCodeHash;
 
     //almacena el código de inicio para contratos transitorios que implementan contratos metamórficos.
