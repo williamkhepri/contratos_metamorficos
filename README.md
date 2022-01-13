@@ -309,8 +309,8 @@ Returns: True si el contrato se ha implementado, False en caso contrario.
 
 ## Mantenimiento
 
-[@williamkhepri](https://github.com/williamkhepri)
-repositorio original en inglés [0age](https://github.com/0age) 
+Traducción de [@williamkhepri](https://github.com/williamkhepri)
+del repositorio original en inglés de [0age](https://github.com/0age) 
 
 ## Licencia
 
