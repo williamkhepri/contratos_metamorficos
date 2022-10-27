@@ -114,7 +114,7 @@ Argumentos:
 | implementationContractInitializationCode | bytes | El código de inicialización del contrato metamórfico.Se utilizará para implementar un nuevo contrato que luego el contrato metamórfico clonará en su constructor. | 
 | metamorphicContractInitializationCalldata | bytes | Un parámetro de datos opcional que se puede utilizar para inicializar atómicamente el contrato metamórfico. | 
 
-Returns: Dirección del contrato metamórfico que se creará.
+Devuelve: Dirección del contrato metamórfico que se creará.
 
 #### deployMetamorphicContractFromExistingImplementation
 
@@ -140,7 +140,7 @@ Argumentos:
 | implementationContract | address | La dirección del contrato de implementación existente para clonar. | 
 | metamorphicContractInitializationCalldata | bytes | Un parámetro de datos opcional que se puede utilizar para inicializar atómicamente el contrato metamórfico. | 
 
-Returns: Dirección del contrato metamórfico que se creará.
+Devuelve: Dirección del contrato metamórfico que se creará.
 
 #### getImplementation
 
@@ -152,7 +152,7 @@ function getImplementation() external view returns (address implementation)
 
 #### getImplementationContractAddress
 
-Función Ver para recuperar la dirección del contrato de implementación actual de un contato metamórfico dado, donde la dirección del contrato se proporciona como argumento.
+Función "Ver" para recuperar la dirección del contrato de implementación actual de un contato metamórfico dado, donde la dirección del contrato se proporciona como argumento.
 Ten en cuenta que el contrato de implementación tiene un estado independiente y puede haber sido alterado o autodestruido desde la última vez que fue clonado por el contrato metamórfico.
 
 ```Solidity
@@ -169,7 +169,7 @@ Argumentos:
 | ------------- |------------- | -----|
 | metamorphicContractAddress | address | La dirección del contrato metamórfico. | 
 
-Returns: Dirección del correspondiente contrato de ejecución.
+Devuelve: Dirección del correspondiente contrato de ejecución.
 
 #### findMetamorphicContractAddress
 
@@ -183,13 +183,13 @@ function findMetamorphicContractAddress(
 )
 ```
 
-Arguments:
+Argumentos:
 
 | Nombre        | Tipo         | Descripción  |
 | ------------- |------------- | -----|
 | salt | bytes32 | El nonce pasado a CREATE2 por el contrato metamórfico. | 
 
-Returns: La dirección del contrato metamórfico correspondiente.
+Devuelve: La dirección del contrato metamórfico correspondiente.
 
 #### getMetamorphicContractInitializationCode
 
@@ -218,7 +218,7 @@ El contrato evita los redespliegues al mantener un mapeo de todos los contratos 
 *(esto se puede omitir configurando los primeros 20 bytes como una dirección nula)*.
 También hay una función de vista que calcula la dirección del contrato que se creará al enviar una salt o nonce dado junto con un bloque dado de código de inicialización.
 
-#### Functions
+#### Funciones
 
 - [safeCreate2](#safecreate2)
 - [findCreate2Address](#findcreate2address)
@@ -238,14 +238,14 @@ function safeCreate2(
 )
 ```
 
-Arguments:
+Argumentos:
 
 | Nombre        | Tipo         | Descripción  |
 | ------------- |------------- | -----|
 | salt | bytes32 | El nonce que se pasará a la llamada a CREATE2. | 
 | initializationCode | bytes | El código de inicialización que se pasará a la llamada a CREATE2. | 
 
-Returns: Dirección del contrato que se creará, o la dirección nula si ya existe un contrato en esa dirección.
+Devuelve: Dirección del contrato que se creará, o la dirección nula si ya existe un contrato en esa dirección.
 
 #### findCreate2Address
 
@@ -267,7 +267,7 @@ Argumentos:
 | salt | bytes32 | El nonce pasó al cálculo de la dirección CREATE2. | 
 | initCode | bytes | El código de inicialización del contrato que se utilizará y que se pasará al cálculo de la dirección CREATE2. | 
 
-Returns: Dirección del contrato que se creará, o la dirección nula si ya se ha desplegado un contrato en esa dirección.
+Devuelve: Dirección del contrato que se creará, o la dirección nula si ya se ha desplegado un contrato en esa dirección.
 
 #### findCreate2AddressViaHash
 
@@ -289,7 +289,7 @@ Argumentos:
 | salt | bytes32 | El nonce pasó al cálculo de la direción CREATE2. | 
 | initCodeHash | bytes32 | El hash keccak256 del código de inicialización que se pasará al cálculo de la dirección CREATE2. | 
 
-Returns: Dirección del contrato que se creará, o la dirección nula si ya se ha desplegado un contrato en esa dirección.
+Devuelve: Dirección del contrato que se creará, o la dirección nula si ya se ha desplegado un contrato en esa dirección.
 
 #### hasBeenDeployed
 
@@ -305,7 +305,7 @@ Argumentos:
 | ------------- |------------- | -----|
 | deploymentAddress | address | La dirección del contrato para comprobar. | 
 
-Returns: True si el contrato se ha implementado, False en caso contrario.
+Devuelve: True si el contrato se ha implementado, False en caso contrario.
 
 ## Mantenimiento
 
